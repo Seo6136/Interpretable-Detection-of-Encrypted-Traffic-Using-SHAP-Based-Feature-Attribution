@@ -64,6 +64,7 @@ Key contributions of this project include:
 ```bash
 python3 -m venv venv
 source venv/bin/activate
+```
 
 3. Install all required Python packages:
 ```bash
