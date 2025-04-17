@@ -22,17 +22,27 @@ Key contributions of this project include:
 
 ### Architecture
 
+![System Framework](./system-framework.png)
+
 1. **Learning & Attribution Engine**
    - Trains a Random Forest classifier on encrypted traffic datasets.
    - Computes SHAP values to analyze feature contributions.
 
-2. **Domain-Aware Explanation Generator**
-   - Defines semantic rules based on global SHAP outputs.
-   - Converts raw SHAP values into readable insights and response guidelines.
+2. **Global SHAP Analysis**
+   - Provides overall feature importance used by policy designers to define semantic rules.
 
-3. **Analyst Dashboard**
-   - Presents SHAP explanations and system predictions.
-   - Allows per-session inspection and operational decision support.
+3. **Domain Rule Definition**
+   - Policy designers build rule sets that interpret SHAP-ranked features in a security context.
+
+4. **Session Classification & Local SHAP Computation**
+   - New sessions are classified; local SHAP values are computed for malicious sessions.
+
+5. **Domain-Aware Explanation**
+   - Matches local SHAP values to semantic rules and generates human-readable interpretations.
+
+6. **Analyst Interaction**
+   - Security analysts use a dashboard to inspect explanations and respond with informed decisions.
+
 
 ### Technologies Used
 
