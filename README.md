@@ -53,3 +53,39 @@ Key contributions of this project include:
 - **Visualization**: Matplotlib, Seaborn, SHAP plots
 - **Dataset**: [Encrypted Traffic Feature Dataset](https://data.mendeley.com/datasets/xw7r4tt54g/1)
 - **Development Environment**: Jupyter Notebook, VS Code
+
+
+### Installation and Steps to Test System
+#### Prerequisites
+
+1. Install **Python 3.8+** and `pip` (Python package manager).
+
+2. (Recommended) Create and activate a virtual environment:
+```bash
+python3 -m venv venv
+source venv/bin/activate
+
+3. Install all required Python packages:
+```bash
+pip install -r requirements.txt
+```
+#### Steps
+1. Download dataset:
+```bash
+wget https://prod-dcd-datasets-cache-zipfiles.s3.eu-west-1.amazonaws.com/xw7r4tt54g-1.zip
+```
+
+2. Run model training and SHAP analysis:
+```bash
+python3 session_rf_shap_analysis.py
+```
+
+3. Generate domain rule definition:
+```bash
+python3 feature_explanation_from_csv
+```
+
+4. Strat Dashboard
+```bash
+streamlit run dashboard.py
+```
