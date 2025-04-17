@@ -2,52 +2,44 @@
 
 ### Introduction
 
-This project focuses on building an interpretable machine learning framework to detect encrypted network traffic. Traditional traffic classification methods struggle with encrypted packets due to lack of payload visibility. To address this, we use a machine learning-based approach supported by SHAP (SHapley Additive exPlanations) to provide human-understandable explanations of model predictions.
+As encryption becomes ubiquitous in modern network communications, traditional intrusion detection systems (IDS) relying on payload inspection are losing effectiveness. To address this, machine learning (ML) techniques using flow-level statistical features—such as packet timing, sizes, and connection metadata—offer a promising alternative. However, the black-box nature of ML models hinders their adoption in practical security operations, where interpretability and trust are crucial.
 
-The goal is to improve network transparency and decision traceability when applying ML-based traffic analysis for security.
+This project proposes an end-to-end detection and explanation framework that combines high-performance encrypted traffic detection with human-understandable interpretations using **SHAP (SHapley Additive exPlanations)**. By applying both global and local SHAP analysis to a trained Random Forest classifier, we aim to provide actionable insights to both policy designers and security analysts.
+
+Key contributions of this project include:
+- Accurate detection of malicious encrypted traffic using flow-level ML models.
+- SHAP-based global feature importance analysis for policy rule construction.
+- Contextual local explanation generation through a domain-aware interpretation engine.
+- Visualization of per-session predictions and explanations via an interactive dashboard.
 
 ### Features
 
-- **Traffic Classification Model**: Detects whether traffic is encrypted or not using ML classifiers.
-- **SHAP Explainability**: Visualizes and explains model decisions at both global and local levels.
-- **Feature Attribution Analysis**: Identifies which features most influence classification outcomes.
-- **Visualization**: Generates graphs and plots to interpret model behavior.
-- **Lightweight Deployment**: Can be extended for use in real-time SDN/NFV environments.
+- **Flow-based Encrypted Traffic Detection**: Uses ML models trained on flow-level features without requiring decryption.
+- **Global and Local Interpretability**: SHAP analysis provides both overall and per-session explanations of model decisions.
+- **Domain-Aware Explanation Engine**: Maps feature contributions to contextual security insights using predefined semantic rules.
+- **Interactive Analyst Dashboard**: Displays SHAP visualizations with human-readable interpretations and recommended responses.
+- **High Accuracy**: Achieves over 99% accuracy, precision, recall, and F1-score in detecting malicious encrypted sessions.
 
 ### Architecture
 
-1. **Data Preprocessing**
-   - Load and clean network traffic datasets (e.g., ISCXVPN2016).
-   - Extract flow-level features (e.g., duration, packet size, inter-arrival time).
+1. **Learning & Attribution Engine**
+   - Trains a Random Forest classifier on encrypted traffic datasets.
+   - Computes SHAP values to analyze feature contributions.
 
-2. **Model Training**
-   - Train classifiers (e.g., XGBoost, Random Forest).
-   - Validate using k-fold cross-validation or hold-out sets.
+2. **Domain-Aware Explanation Generator**
+   - Defines semantic rules based on global SHAP outputs.
+   - Converts raw SHAP values into readable insights and response guidelines.
 
-3. **SHAP Analysis**
-   - Apply SHAP to explain individual predictions.
-   - Plot global feature importance and interaction effects.
-
-4. **Result Visualization**
-   - Generate summary plots, force plots, and decision plots to interpret results.
+3. **Analyst Dashboard**
+   - Presents SHAP explanations and system predictions.
+   - Allows per-session inspection and operational decision support.
 
 ### Technologies Used
 
-- **Programming Language**: Python
-- **Libraries**:
-  - Scikit-learn
-  - XGBoost
-  - SHAP
-  - Pandas / Numpy
-  - Matplotlib / Seaborn
-- **Dataset**: ISCXVPN2016 (or similar encrypted traffic datasets)
-- **Development Environment**: Jupyter Notebook / VS Code
-
-### Installation and Steps to Test System
-
-#### Prerequisites
-
-1. Python 3.8+
-2. Install required packages:
-```bash
-pip install -r requirements.txt
+- **Programming Languages**: Python
+- **Machine Learning Frameworks**: Scikit-learn, XGBoost
+- **Explainability Toolkits**: SHAP
+- **Data Handling**: Pandas, NumPy
+- **Visualization**: Matplotlib, Seaborn, SHAP plots
+- **Dataset**: [Encrypted Traffic Feature Dataset](https://data.mendeley.com/datasets/xw7r4tt54g/1)
+- **Development Environment**: Jupyter Notebook, VS Code
