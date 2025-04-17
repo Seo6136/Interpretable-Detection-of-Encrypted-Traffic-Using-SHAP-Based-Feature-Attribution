@@ -6,6 +6,7 @@ from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_sc
 from sklearn.preprocessing import MinMaxScaler
 import shap
 import matplotlib.pyplot as plt
+import joblib
 
 # 1. 데이터 불러오기
 df = pd.read_csv("session_dataset.csv")  # 파일명에 맞게 조정 필요
@@ -44,12 +45,13 @@ shap_values = explainer.shap_values(X_sample)
 
 # SHAP 중요도 시각화 (Global)
 shap.summary_plot(shap_values[1], X_sample, feature_names=X.columns, max_display=10, show=False)
-plt.tight_layout()
-plt.savefig("shap_summary_plot.png")
+plt.savefig("shap_summary_plot.png", bbox_inches='tight')
 plt.show()
 
 
-
-
-# CLI에서 force_plot 생략하거나 저장하는 방식으로 대체 가능
+print("📦 Saving SHAP values and data...")
+np.save("shap_values.npy", shap_values)
+joblib.dump(pd.DataFrame(X_sample, columns=X.columns), "X_sample.pkl")
+malicious_indices = [i for i in range(len(X_sample)) if y_test.iloc[i] == 1]
+joblib.dump(malicious_indices, "malicious_indices.pkl")
 

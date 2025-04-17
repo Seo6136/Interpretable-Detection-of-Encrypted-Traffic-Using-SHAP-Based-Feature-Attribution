@@ -1,0 +1,280 @@
+feature_name,condition_hint,explanation,response_guide
+Total_length_of_IP_packet_per_session,If the total value is high,A high total may indicate large data transfers or tunneling.,Monitor for sessions with heavy traffic volume.
+Total_Time_to_live_per_session,If the total value is high,A high total may indicate large data transfers or tunneling.,Monitor for sessions with heavy traffic volume.
+The_times_of_change_of_TCP_windows_length,If the value is large,Large changes in TCP window size may indicate evasion or scanning behavior.,Apply rules to detect abnormal TCP behaviors.
+The_times_of_change_of_payload_per_session,(Interpretation may vary depending on value range),"This feature does not match specific rules, but may still be relevant based on statistical patterns.",Use traffic distribution analysis to define detection policies.
+Total_length_of_forward_payload,If the value is large,Abnormally large payloads may indicate data exfiltration or tunneling.,Monitor sessions with high payload volume.
+Total_length_of_backward_payload,If the value is large,Abnormally large payloads may indicate data exfiltration or tunneling.,Monitor sessions with high payload volume.
+Total_length_of_forward_IP_header,If the total value is high,A high total may indicate large data transfers or tunneling.,Monitor for sessions with heavy traffic volume.
+Total_length_of_backward_IP_header,If the total value is high,A high total may indicate large data transfers or tunneling.,Monitor for sessions with heavy traffic volume.
+Total_length_of_forward_TCP_header,If the total value is high,A high total may indicate large data transfers or tunneling.,Monitor for sessions with heavy traffic volume.
+Total_length_of_backward_TCP_header,If the total value is high,A high total may indicate large data transfers or tunneling.,Monitor for sessions with heavy traffic volume.
+Total_length_of_forward_TCP_segment(packet),If the total value is high,A high total may indicate large data transfers or tunneling.,Monitor for sessions with heavy traffic volume.
+Total_length_of_backward_TCP_segment(packet),If the total value is high,A high total may indicate large data transfers or tunneling.,Monitor for sessions with heavy traffic volume.
+flow duration,If the value is between 0.3 and 0.6,Suspicious traffic ratios may imply focused attacks or scanning activity.,Analyze concentrated traffic by IP or port.
+No_of_forward_packets,(Interpretation may vary depending on value range),"This feature does not match specific rules, but may still be relevant based on statistical patterns.",Use traffic distribution analysis to define detection policies.
+No_of_backward_packets,(Interpretation may vary depending on value range),"This feature does not match specific rules, but may still be relevant based on statistical patterns.",Use traffic distribution analysis to define detection policies.
+Bytes_From_Clients(IPpacket),(Interpretation may vary depending on value range),"This feature does not match specific rules, but may still be relevant based on statistical patterns.",Use traffic distribution analysis to define detection policies.
+Bytes_From_Servers(IPpacket),(Interpretation may vary depending on value range),"This feature does not match specific rules, but may still be relevant based on statistical patterns.",Use traffic distribution analysis to define detection policies.
+mean_Length_of_IP_packets,If the mean is high,High mean values may suggest excessive or continuous activity.,Check whether the metric consistently exceeds expected thresholds.
+median_Length_of_IP_packets,(Interpretation may vary depending on value range),"This feature does not match specific rules, but may still be relevant based on statistical patterns.",Use traffic distribution analysis to define detection policies.
+max_Length_of_IP_packets,If values are extreme,Extremely high or low values may indicate outlier or anomalous activity.,Apply threshold-based anomaly detection.
+min_Length_of_IP_packets,If the value is small,A high ratio of short IP packets may indicate C2 (command/control) traffic.,"Consider filtering sessions with short, repetitive packets."
+std_Length_of_IP_packets,If the standard deviation is large,High variability may indicate unstable or erratic behavior in traffic.,Consider rules for detecting irregular patterns.
+var_Length_of_IP_packets,If the variance is high,High variance could point to inconsistent communication patterns.,Evaluate traffic stability and consider limits or alerts.
+mean_Length_of_TCP_payload,If the mean is high,High mean values may suggest excessive or continuous activity.,Check whether the metric consistently exceeds expected thresholds.
+median_Length_of_TCP_payload,(Interpretation may vary depending on value range),"This feature does not match specific rules, but may still be relevant based on statistical patterns.",Use traffic distribution analysis to define detection policies.
+max_Length_of_TCP_payload,If values are extreme,Extremely high or low values may indicate outlier or anomalous activity.,Apply threshold-based anomaly detection.
+min_Length_of_TCP_payload,If values are extreme,Extremely high or low values may indicate outlier or anomalous activity.,Apply threshold-based anomaly detection.
+std_Length_of_TCP_payload,If the standard deviation is large,High variability may indicate unstable or erratic behavior in traffic.,Consider rules for detecting irregular patterns.
+var_Length_of_TCP_payload,If the variance is high,High variance could point to inconsistent communication patterns.,Evaluate traffic stability and consider limits or alerts.
+mean_Length_of_TCP_packet_header,If the mean is high,High mean values may suggest excessive or continuous activity.,Check whether the metric consistently exceeds expected thresholds.
+median_Length_of_TCP_packet_header,(Interpretation may vary depending on value range),"This feature does not match specific rules, but may still be relevant based on statistical patterns.",Use traffic distribution analysis to define detection policies.
+max_Length_of_TCP_packet_header,If values are extreme,Extremely high or low values may indicate outlier or anomalous activity.,Apply threshold-based anomaly detection.
+min_Length_of_TCP_packet_header,If values are extreme,Extremely high or low values may indicate outlier or anomalous activity.,Apply threshold-based anomaly detection.
+std_Length_of_TCP_packet_header,If the standard deviation is large,High variability may indicate unstable or erratic behavior in traffic.,Consider rules for detecting irregular patterns.
+var_Length_of_TCP_packet_header,If the variance is high,High variance could point to inconsistent communication patterns.,Evaluate traffic stability and consider limits or alerts.
+mean_Length_of_IP_packet_header,If the mean is high,High mean values may suggest excessive or continuous activity.,Check whether the metric consistently exceeds expected thresholds.
+median_Length_of_IP_packet_header,(Interpretation may vary depending on value range),"This feature does not match specific rules, but may still be relevant based on statistical patterns.",Use traffic distribution analysis to define detection policies.
+max_Length_of_IP_packet_header,If values are extreme,Extremely high or low values may indicate outlier or anomalous activity.,Apply threshold-based anomaly detection.
+min_Length_of_IP_packet_header,If the value is small,A high ratio of short IP packets may indicate C2 (command/control) traffic.,"Consider filtering sessions with short, repetitive packets."
+std_Length_of_IP_packet_header,If the standard deviation is large,High variability may indicate unstable or erratic behavior in traffic.,Consider rules for detecting irregular patterns.
+var_Length_of_IP_packet_header,If the variance is high,High variance could point to inconsistent communication patterns.,Evaluate traffic stability and consider limits or alerts.
+mean_TCP_windows_size_value,If the mean is high,High mean values may suggest excessive or continuous activity.,Check whether the metric consistently exceeds expected thresholds.
+median_TCP_windows_size_value,(Interpretation may vary depending on value range),"This feature does not match specific rules, but may still be relevant based on statistical patterns.",Use traffic distribution analysis to define detection policies.
+max_TCP_windows_size_value,If values are extreme,Extremely high or low values may indicate outlier or anomalous activity.,Apply threshold-based anomaly detection.
+min_TCP_windows_size_value,If values are extreme,Extremely high or low values may indicate outlier or anomalous activity.,Apply threshold-based anomaly detection.
+std_TCP_windows_size_value,If the standard deviation is large,High variability may indicate unstable or erratic behavior in traffic.,Consider rules for detecting irregular patterns.
+var_TCP_windows_size_value,If the variance is high,High variance could point to inconsistent communication patterns.,Evaluate traffic stability and consider limits or alerts.
+mean_Length_of_TCP_segment(packet),If the mean is high,High mean values may suggest excessive or continuous activity.,Check whether the metric consistently exceeds expected thresholds.
+median_Length_of_TCP_segment(packet),(Interpretation may vary depending on value range),"This feature does not match specific rules, but may still be relevant based on statistical patterns.",Use traffic distribution analysis to define detection policies.
+max_Length_of_TCP_segment(packet),If values are extreme,Extremely high or low values may indicate outlier or anomalous activity.,Apply threshold-based anomaly detection.
+min_Length_of_TCP_segment(packet),If values are extreme,Extremely high or low values may indicate outlier or anomalous activity.,Apply threshold-based anomaly detection.
+std_Length_of_TCP_segment(packet),If the standard deviation is large,High variability may indicate unstable or erratic behavior in traffic.,Consider rules for detecting irregular patterns.
+var_Length_of_TCP_segment(packet),If the variance is high,High variance could point to inconsistent communication patterns.,Evaluate traffic stability and consider limits or alerts.
+mean_Time_difference_between_packets_per_session,If the mean is high,High mean values may suggest excessive or continuous activity.,Check whether the metric consistently exceeds expected thresholds.
+median_Time_difference_between_packets_per_session,(Interpretation may vary depending on value range),"This feature does not match specific rules, but may still be relevant based on statistical patterns.",Use traffic distribution analysis to define detection policies.
+max_Time_difference_between_packets_per_session,If values are extreme,Extremely high or low values may indicate outlier or anomalous activity.,Apply threshold-based anomaly detection.
+min_Time_difference_between_packets_per_session,If the value is 0 or very small,Very short inter-packet times may indicate automated or scripted traffic.,Consider applying detection rules for bots or automated tools.
+std_Time_difference_between_packets_per_session,If the standard deviation is large,High variability may indicate unstable or erratic behavior in traffic.,Consider rules for detecting irregular patterns.
+var_Time_difference_between_packets_per_session,If the variance is high,High variance could point to inconsistent communication patterns.,Evaluate traffic stability and consider limits or alerts.
+mean_Change_values_of_TCP_windows_length_per_session,If the value is large,Large changes in TCP window size may indicate evasion or scanning behavior.,Apply rules to detect abnormal TCP behaviors.
+median_Change_values_of_TCP_windows_length_per_session,If the value is large,Large changes in TCP window size may indicate evasion or scanning behavior.,Apply rules to detect abnormal TCP behaviors.
+max_Change_values_of_TCP_windows_length_per_session,If the value is large,Large changes in TCP window size may indicate evasion or scanning behavior.,Apply rules to detect abnormal TCP behaviors.
+min_Change_values_of_TCP_windows_length_per_session,If the value is large,Large changes in TCP window size may indicate evasion or scanning behavior.,Apply rules to detect abnormal TCP behaviors.
+std_Change_values_of_TCP_windows_length_per_session,If the value is large,Large changes in TCP window size may indicate evasion or scanning behavior.,Apply rules to detect abnormal TCP behaviors.
+var_Change_values_of_TCP_windows_length_per_session,If the value is large,Large changes in TCP window size may indicate evasion or scanning behavior.,Apply rules to detect abnormal TCP behaviors.
+mean_time_to_live,If the mean is high,High mean values may suggest excessive or continuous activity.,Check whether the metric consistently exceeds expected thresholds.
+median_time_to_live,(Interpretation may vary depending on value range),"This feature does not match specific rules, but may still be relevant based on statistical patterns.",Use traffic distribution analysis to define detection policies.
+max_time_to_live,If values are extreme,Extremely high or low values may indicate outlier or anomalous activity.,Apply threshold-based anomaly detection.
+min_time_to_live,If the value is 0 or very small,Very short inter-packet times may indicate automated or scripted traffic.,Consider applying detection rules for bots or automated tools.
+std_time_to_live,If the standard deviation is large,High variability may indicate unstable or erratic behavior in traffic.,Consider rules for detecting irregular patterns.
+var_time_to_live,If the variance is high,High variance could point to inconsistent communication patterns.,Evaluate traffic stability and consider limits or alerts.
+std_forward_packet_length,If the standard deviation is large,High variability may indicate unstable or erratic behavior in traffic.,Consider rules for detecting irregular patterns.
+mean_forward_packet_length,If the mean is high,High mean values may suggest excessive or continuous activity.,Check whether the metric consistently exceeds expected thresholds.
+max_forward_packet_length,If values are extreme,Extremely high or low values may indicate outlier or anomalous activity.,Apply threshold-based anomaly detection.
+min_forward_packet_length,If values are extreme,Extremely high or low values may indicate outlier or anomalous activity.,Apply threshold-based anomaly detection.
+var_forward_packet_length,If the variance is high,High variance could point to inconsistent communication patterns.,Evaluate traffic stability and consider limits or alerts.
+median_forward_packet_length,(Interpretation may vary depending on value range),"This feature does not match specific rules, but may still be relevant based on statistical patterns.",Use traffic distribution analysis to define detection policies.
+std_backward_packet_length,If the standard deviation is large,High variability may indicate unstable or erratic behavior in traffic.,Consider rules for detecting irregular patterns.
+mean_backward_packet_length,If the mean is high,High mean values may suggest excessive or continuous activity.,Check whether the metric consistently exceeds expected thresholds.
+max_backward_packet_length,If values are extreme,Extremely high or low values may indicate outlier or anomalous activity.,Apply threshold-based anomaly detection.
+min_backward_packet_length,If values are extreme,Extremely high or low values may indicate outlier or anomalous activity.,Apply threshold-based anomaly detection.
+var_backward_packet_length,If the variance is high,High variance could point to inconsistent communication patterns.,Evaluate traffic stability and consider limits or alerts.
+median_backward_packet_length,(Interpretation may vary depending on value range),"This feature does not match specific rules, but may still be relevant based on statistical patterns.",Use traffic distribution analysis to define detection policies.
+flow_duration_of_forward_traffic,If the value is between 0.3 and 0.6,Suspicious traffic ratios may imply focused attacks or scanning activity.,Analyze concentrated traffic by IP or port.
+flow_duration_of_backward_traffic,If the value is between 0.3 and 0.6,Suspicious traffic ratios may imply focused attacks or scanning activity.,Analyze concentrated traffic by IP or port.
+mean_Interval_of_arrival_time_of_forward_traffic,If the mean is high,High mean values may suggest excessive or continuous activity.,Check whether the metric consistently exceeds expected thresholds.
+median_Interval_of_arrival_time_of_forward_traffic,(Interpretation may vary depending on value range),"This feature does not match specific rules, but may still be relevant based on statistical patterns.",Use traffic distribution analysis to define detection policies.
+max_Interval_of_arrival_time_of_forward_traffic,If values are extreme,Extremely high or low values may indicate outlier or anomalous activity.,Apply threshold-based anomaly detection.
+min_Interval_of_arrival_time_of_forward_traffic,If the value is 0 or very small,Very short inter-packet times may indicate automated or scripted traffic.,Consider applying detection rules for bots or automated tools.
+std_Interval_of_arrival_time_of_forward_traffic,If the standard deviation is large,High variability may indicate unstable or erratic behavior in traffic.,Consider rules for detecting irregular patterns.
+var_Interval_of_arrival_time_of_forward_traffic,If the variance is high,High variance could point to inconsistent communication patterns.,Evaluate traffic stability and consider limits or alerts.
+mean_Interval_of_arrival_time_of_backward_traffic,If the mean is high,High mean values may suggest excessive or continuous activity.,Check whether the metric consistently exceeds expected thresholds.
+median_Interval_of_arrival_time_of_backward_traffic,(Interpretation may vary depending on value range),"This feature does not match specific rules, but may still be relevant based on statistical patterns.",Use traffic distribution analysis to define detection policies.
+max_Interval_of_arrival_time_of_backward_traffic,If values are extreme,Extremely high or low values may indicate outlier or anomalous activity.,Apply threshold-based anomaly detection.
+min_Interval_of_arrival_time_of_backward_traffic,If the value is 0 or very small,Very short inter-packet times may indicate automated or scripted traffic.,Consider applying detection rules for bots or automated tools.
+std_Interval_of_arrival_time_of_backward_traffic,If the standard deviation is large,High variability may indicate unstable or erratic behavior in traffic.,Consider rules for detecting irregular patterns.
+var_Interval_of_arrival_time_of_backward_traffic,If the variance is high,High variance could point to inconsistent communication patterns.,Evaluate traffic stability and consider limits or alerts.
+total_ttl_forward_traffic,If the total value is high,A high total may indicate large data transfers or tunneling.,Monitor for sessions with heavy traffic volume.
+std_ttl_forward_traffic,If the standard deviation is large,High variability may indicate unstable or erratic behavior in traffic.,Consider rules for detecting irregular patterns.
+mean_ttl_forward_traffic,If the mean is high,High mean values may suggest excessive or continuous activity.,Check whether the metric consistently exceeds expected thresholds.
+max_ttl_forward_traffic,If values are extreme,Extremely high or low values may indicate outlier or anomalous activity.,Apply threshold-based anomaly detection.
+min_ttl_forward_traffic,If values are extreme,Extremely high or low values may indicate outlier or anomalous activity.,Apply threshold-based anomaly detection.
+var_ttl_forward_traffic,If the value is high,High TTL variance may indicate routing evasion or proxy use.,Enable detection rules based on TTL anomalies.
+median_ttl_forward_traffic,(Interpretation may vary depending on value range),"This feature does not match specific rules, but may still be relevant based on statistical patterns.",Use traffic distribution analysis to define detection policies.
+total_ttl_backward_traffic,If the total value is high,A high total may indicate large data transfers or tunneling.,Monitor for sessions with heavy traffic volume.
+std_ttl_backward_traffic,If the standard deviation is large,High variability may indicate unstable or erratic behavior in traffic.,Consider rules for detecting irregular patterns.
+mean_ttl_backward_traffic,If the mean is high,High mean values may suggest excessive or continuous activity.,Check whether the metric consistently exceeds expected thresholds.
+max_ttl_backward_traffic,If values are extreme,Extremely high or low values may indicate outlier or anomalous activity.,Apply threshold-based anomaly detection.
+min_ttl_backward_traffic,If values are extreme,Extremely high or low values may indicate outlier or anomalous activity.,Apply threshold-based anomaly detection.
+var_ttl_backward_traffic,If the value is high,High TTL variance may indicate routing evasion or proxy use.,Enable detection rules based on TTL anomalies.
+median_ttl_backward_traffic,(Interpretation may vary depending on value range),"This feature does not match specific rules, but may still be relevant based on statistical patterns.",Use traffic distribution analysis to define detection policies.
+total_TCP_windows_size_value_forward_traffic,If the total value is high,A high total may indicate large data transfers or tunneling.,Monitor for sessions with heavy traffic volume.
+std_TCP_windows_size_value_forward_traffic,If the standard deviation is large,High variability may indicate unstable or erratic behavior in traffic.,Consider rules for detecting irregular patterns.
+mean_TCP_windows_size_value_forward_traffic,If the mean is high,High mean values may suggest excessive or continuous activity.,Check whether the metric consistently exceeds expected thresholds.
+max_TCP_windows_size_value_forward_traffic,If values are extreme,Extremely high or low values may indicate outlier or anomalous activity.,Apply threshold-based anomaly detection.
+min_TCP_windows_size_value_forward_traffic,If values are extreme,Extremely high or low values may indicate outlier or anomalous activity.,Apply threshold-based anomaly detection.
+var_TCP_windows_size_value_forward_traffic,If the variance is high,High variance could point to inconsistent communication patterns.,Evaluate traffic stability and consider limits or alerts.
+median_TCP_windows_size_value_forward_traffic,(Interpretation may vary depending on value range),"This feature does not match specific rules, but may still be relevant based on statistical patterns.",Use traffic distribution analysis to define detection policies.
+total_TCP_windows_size_valuel_backward_traffic,If the total value is high,A high total may indicate large data transfers or tunneling.,Monitor for sessions with heavy traffic volume.
+std_TCP_windows_size_value_backward_traffic,If the standard deviation is large,High variability may indicate unstable or erratic behavior in traffic.,Consider rules for detecting irregular patterns.
+mean_TCP_windows_size_value_backward_traffic,If the mean is high,High mean values may suggest excessive or continuous activity.,Check whether the metric consistently exceeds expected thresholds.
+max_TCP_windows_size_value_backward_traffic,If values are extreme,Extremely high or low values may indicate outlier or anomalous activity.,Apply threshold-based anomaly detection.
+min_TCP_windows_size_value_backward_traffic,If values are extreme,Extremely high or low values may indicate outlier or anomalous activity.,Apply threshold-based anomaly detection.
+var_TCP_windows_size_value_backward_traffic,If the variance is high,High variance could point to inconsistent communication patterns.,Evaluate traffic stability and consider limits or alerts.
+median_TCP_windows_size_value_backward_traffic,(Interpretation may vary depending on value range),"This feature does not match specific rules, but may still be relevant based on statistical patterns.",Use traffic distribution analysis to define detection policies.
+std_forward_packet_length_enc,If the standard deviation is large,High variability may indicate unstable or erratic behavior in traffic.,Consider rules for detecting irregular patterns.
+mean_forward_packet_length_enc,If the mean is high,High mean values may suggest excessive or continuous activity.,Check whether the metric consistently exceeds expected thresholds.
+max_forward_packet_length_enc,If values are extreme,Extremely high or low values may indicate outlier or anomalous activity.,Apply threshold-based anomaly detection.
+min_forward_packet_length_enc,If values are extreme,Extremely high or low values may indicate outlier or anomalous activity.,Apply threshold-based anomaly detection.
+var_forward_packet_length_enc,If the variance is high,High variance could point to inconsistent communication patterns.,Evaluate traffic stability and consider limits or alerts.
+median_forward_packet_length_enc,(Interpretation may vary depending on value range),"This feature does not match specific rules, but may still be relevant based on statistical patterns.",Use traffic distribution analysis to define detection policies.
+std_backward_packet_length_enc,If the standard deviation is large,High variability may indicate unstable or erratic behavior in traffic.,Consider rules for detecting irregular patterns.
+mean_backward_packet_length_enc,If the mean is high,High mean values may suggest excessive or continuous activity.,Check whether the metric consistently exceeds expected thresholds.
+max_backward_packet_length_enc,If values are extreme,Extremely high or low values may indicate outlier or anomalous activity.,Apply threshold-based anomaly detection.
+min_backward_packet_length_enc,If values are extreme,Extremely high or low values may indicate outlier or anomalous activity.,Apply threshold-based anomaly detection.
+var_backward_packet_length_enc,If the variance is high,High variance could point to inconsistent communication patterns.,Evaluate traffic stability and consider limits or alerts.
+median_backward_packet_length_enc,(Interpretation may vary depending on value range),"This feature does not match specific rules, but may still be relevant based on statistical patterns.",Use traffic distribution analysis to define detection policies.
+flow_duration_enc,If the value is between 0.3 and 0.6,Suspicious traffic ratios may imply focused attacks or scanning activity.,Analyze concentrated traffic by IP or port.
+flow_duration_of_forward_traffic_enc,If the value is between 0.3 and 0.6,Suspicious traffic ratios may imply focused attacks or scanning activity.,Analyze concentrated traffic by IP or port.
+flow_duration_of_backward_traffic_enc,If the value is between 0.3 and 0.6,Suspicious traffic ratios may imply focused attacks or scanning activity.,Analyze concentrated traffic by IP or port.
+mean_Interval_of_arrival_time_of_forward_traffic_enc,If the mean is high,High mean values may suggest excessive or continuous activity.,Check whether the metric consistently exceeds expected thresholds.
+median_Interval_of_arrival_time_of_forward_traffic_enc,(Interpretation may vary depending on value range),"This feature does not match specific rules, but may still be relevant based on statistical patterns.",Use traffic distribution analysis to define detection policies.
+max_Interval_of_arrival_time_of_forward_traffic_enc,If values are extreme,Extremely high or low values may indicate outlier or anomalous activity.,Apply threshold-based anomaly detection.
+min_Interval_of_arrival_time_of_forward_traffic_enc,If the value is 0 or very small,Very short inter-packet times may indicate automated or scripted traffic.,Consider applying detection rules for bots or automated tools.
+std_Interval_of_arrival_time_of_forward_traffic_enc,If the standard deviation is large,High variability may indicate unstable or erratic behavior in traffic.,Consider rules for detecting irregular patterns.
+var_Interval_of_arrival_time_of_forward_traffic_enc,If the variance is high,High variance could point to inconsistent communication patterns.,Evaluate traffic stability and consider limits or alerts.
+mean_Interval_of_arrival_time_of_backward_traffic_enc,If the mean is high,High mean values may suggest excessive or continuous activity.,Check whether the metric consistently exceeds expected thresholds.
+median_Interval_of_arrival_time_of_backward_traffic_enc,(Interpretation may vary depending on value range),"This feature does not match specific rules, but may still be relevant based on statistical patterns.",Use traffic distribution analysis to define detection policies.
+max_Interval_of_arrival_time_of_backward_traffic_enc,If values are extreme,Extremely high or low values may indicate outlier or anomalous activity.,Apply threshold-based anomaly detection.
+min_Interval_of_arrival_time_of_backward_traffic_enc,If the value is 0 or very small,Very short inter-packet times may indicate automated or scripted traffic.,Consider applying detection rules for bots or automated tools.
+std_Interval_of_arrival_time_of_backward_traffic_enc,If the standard deviation is large,High variability may indicate unstable or erratic behavior in traffic.,Consider rules for detecting irregular patterns.
+var_Interval_of_arrival_time_of_backward_traffic_enc,If the variance is high,High variance could point to inconsistent communication patterns.,Evaluate traffic stability and consider limits or alerts.
+total_ttl_forward_traffic_enc,If the total value is high,A high total may indicate large data transfers or tunneling.,Monitor for sessions with heavy traffic volume.
+std_ttl_forward_traffic_enc,If the standard deviation is large,High variability may indicate unstable or erratic behavior in traffic.,Consider rules for detecting irregular patterns.
+mean_ttl_forward_traffic_enc,If the mean is high,High mean values may suggest excessive or continuous activity.,Check whether the metric consistently exceeds expected thresholds.
+max_ttl_forward_traffic_enc,If values are extreme,Extremely high or low values may indicate outlier or anomalous activity.,Apply threshold-based anomaly detection.
+min_ttl_forward_traffic_enc,If values are extreme,Extremely high or low values may indicate outlier or anomalous activity.,Apply threshold-based anomaly detection.
+var_ttl_forward_traffic_enc,If the value is high,High TTL variance may indicate routing evasion or proxy use.,Enable detection rules based on TTL anomalies.
+median_ttl_forward_traffic_enc,(Interpretation may vary depending on value range),"This feature does not match specific rules, but may still be relevant based on statistical patterns.",Use traffic distribution analysis to define detection policies.
+total_ttl_backward_traffic_enc,If the total value is high,A high total may indicate large data transfers or tunneling.,Monitor for sessions with heavy traffic volume.
+std_ttl_backward_traffic_enc,If the standard deviation is large,High variability may indicate unstable or erratic behavior in traffic.,Consider rules for detecting irregular patterns.
+mean_ttl_backward_traffic_enc,If the mean is high,High mean values may suggest excessive or continuous activity.,Check whether the metric consistently exceeds expected thresholds.
+max_ttl_backward_traffic_enc,If values are extreme,Extremely high or low values may indicate outlier or anomalous activity.,Apply threshold-based anomaly detection.
+min_ttl_backward_traffic_enc,If values are extreme,Extremely high or low values may indicate outlier or anomalous activity.,Apply threshold-based anomaly detection.
+var_ttl_backward_traffic_enc,If the value is high,High TTL variance may indicate routing evasion or proxy use.,Enable detection rules based on TTL anomalies.
+median_ttl_backward_traffic_enc,(Interpretation may vary depending on value range),"This feature does not match specific rules, but may still be relevant based on statistical patterns.",Use traffic distribution analysis to define detection policies.
+total_TCP_windows_size_value_forward_traffic_enc,If the total value is high,A high total may indicate large data transfers or tunneling.,Monitor for sessions with heavy traffic volume.
+std_TCP_windows_size_value_forward_traffic_enc,If the standard deviation is large,High variability may indicate unstable or erratic behavior in traffic.,Consider rules for detecting irregular patterns.
+mean_TCP_windows_size_value_forward_traffic_enc,If the mean is high,High mean values may suggest excessive or continuous activity.,Check whether the metric consistently exceeds expected thresholds.
+max_TCP_windows_size_value_forward_traffic_enc,If values are extreme,Extremely high or low values may indicate outlier or anomalous activity.,Apply threshold-based anomaly detection.
+min_TCP_windows_size_value_forward_traffic_enc,If values are extreme,Extremely high or low values may indicate outlier or anomalous activity.,Apply threshold-based anomaly detection.
+var_TCP_windows_size_value_forward_traffic_enc,If the variance is high,High variance could point to inconsistent communication patterns.,Evaluate traffic stability and consider limits or alerts.
+median_TCP_windows_size_value_forward_traffic_enc,(Interpretation may vary depending on value range),"This feature does not match specific rules, but may still be relevant based on statistical patterns.",Use traffic distribution analysis to define detection policies.
+total_TCP_windows_size_valuel_backward_traffic_enc,If the total value is high,A high total may indicate large data transfers or tunneling.,Monitor for sessions with heavy traffic volume.
+std_TCP_windows_size_value_backward_traffic_enc,If the standard deviation is large,High variability may indicate unstable or erratic behavior in traffic.,Consider rules for detecting irregular patterns.
+mean_TCP_windows_size_value_backward_traffic_enc,If the mean is high,High mean values may suggest excessive or continuous activity.,Check whether the metric consistently exceeds expected thresholds.
+max_TCP_windows_size_value_backward_traffic_enc,If values are extreme,Extremely high or low values may indicate outlier or anomalous activity.,Apply threshold-based anomaly detection.
+min_TCP_windows_size_value_backward_traffic_enc,If values are extreme,Extremely high or low values may indicate outlier or anomalous activity.,Apply threshold-based anomaly detection.
+var_TCP_windows_size_value_backward_traffic_enc,If the variance is high,High variance could point to inconsistent communication patterns.,Evaluate traffic stability and consider limits or alerts.
+median_TCP_windows_size_value_backward_traffic_enc,(Interpretation may vary depending on value range),"This feature does not match specific rules, but may still be relevant based on statistical patterns.",Use traffic distribution analysis to define detection policies.
+Total_length_of_IP_packet_enc,If the total value is high,A high total may indicate large data transfers or tunneling.,Monitor for sessions with heavy traffic volume.
+max_length_of_IP_packet_enc,If values are extreme,Extremely high or low values may indicate outlier or anomalous activity.,Apply threshold-based anomaly detection.
+min_length_of_IP_packet_enc,If the value is small,A high ratio of short IP packets may indicate C2 (command/control) traffic.,"Consider filtering sessions with short, repetitive packets."
+var_length_of_IP_packet_enc,If the variance is high,High variance could point to inconsistent communication patterns.,Evaluate traffic stability and consider limits or alerts.
+std_length_of_IP_packet_enc,If the standard deviation is large,High variability may indicate unstable or erratic behavior in traffic.,Consider rules for detecting irregular patterns.
+meidan_length_of_IP_packet_enc,(Interpretation may vary depending on value range),"This feature does not match specific rules, but may still be relevant based on statistical patterns.",Use traffic distribution analysis to define detection policies.
+Total_Time_to_live_enc,If the total value is high,A high total may indicate large data transfers or tunneling.,Monitor for sessions with heavy traffic volume.
+Total_length_of_forward_payload_enc,If the value is large,Abnormally large payloads may indicate data exfiltration or tunneling.,Monitor sessions with high payload volume.
+Total_length_of_backward_payload_enc,If the value is large,Abnormally large payloads may indicate data exfiltration or tunneling.,Monitor sessions with high payload volume.
+Total_length_of_forward_IP_header_enc,If the total value is high,A high total may indicate large data transfers or tunneling.,Monitor for sessions with heavy traffic volume.
+Total_length_of_backward_IP_header_enc,If the total value is high,A high total may indicate large data transfers or tunneling.,Monitor for sessions with heavy traffic volume.
+Total_length_of_forward_TCP_header_enc,If the total value is high,A high total may indicate large data transfers or tunneling.,Monitor for sessions with heavy traffic volume.
+Total_length_of_backward_TCP_header_enc,If the total value is high,A high total may indicate large data transfers or tunneling.,Monitor for sessions with heavy traffic volume.
+No_of_enc_forward_packets,(Interpretation may vary depending on value range),"This feature does not match specific rules, but may still be relevant based on statistical patterns.",Use traffic distribution analysis to define detection policies.
+No_of_enc_backward_packets,(Interpretation may vary depending on value range),"This feature does not match specific rules, but may still be relevant based on statistical patterns.",Use traffic distribution analysis to define detection policies.
+Total_length_of_forward_TCP_segment_enc,If the total value is high,A high total may indicate large data transfers or tunneling.,Monitor for sessions with heavy traffic volume.
+Total_length_of_backward_TCP_segment_enc,If the total value is high,A high total may indicate large data transfers or tunneling.,Monitor for sessions with heavy traffic volume.
+mean_of_backward_IP_header,If the mean is high,High mean values may suggest excessive or continuous activity.,Check whether the metric consistently exceeds expected thresholds.
+mean_of_forward_IP_header,If the mean is high,High mean values may suggest excessive or continuous activity.,Check whether the metric consistently exceeds expected thresholds.
+total_payload_per_session,If the total value is high,A high total may indicate large data transfers or tunneling.,Monitor for sessions with heavy traffic volume.
+IPratio,If the value is between 0.3 and 0.6,Suspicious traffic ratios may imply focused attacks or scanning activity.,Analyze concentrated traffic by IP or port.
+Goodput,(Interpretation may vary depending on value range),"This feature does not match specific rules, but may still be relevant based on statistical patterns.",Use traffic distribution analysis to define detection policies.
+total_payload_per_session_enc,If the total value is high,A high total may indicate large data transfers or tunneling.,Monitor for sessions with heavy traffic volume.
+IPratio_enc,If the value is between 0.3 and 0.6,Suspicious traffic ratios may imply focused attacks or scanning activity.,Analyze concentrated traffic by IP or port.
+unique_link_mark,(Interpretation may vary depending on value range),"This feature does not match specific rules, but may still be relevant based on statistical patterns.",Use traffic distribution analysis to define detection policies.
+std_forward_packet_length_ratio,If the value is between 0.3 and 0.6,Suspicious traffic ratios may imply focused attacks or scanning activity.,Analyze concentrated traffic by IP or port.
+mean_forward_packet_length_ratio,If the value is between 0.3 and 0.6,Suspicious traffic ratios may imply focused attacks or scanning activity.,Analyze concentrated traffic by IP or port.
+max_forward_packet_length_ratio,If the value is between 0.3 and 0.6,Suspicious traffic ratios may imply focused attacks or scanning activity.,Analyze concentrated traffic by IP or port.
+min_forward_packet_length_ratio,If the value is between 0.3 and 0.6,Suspicious traffic ratios may imply focused attacks or scanning activity.,Analyze concentrated traffic by IP or port.
+var_forward_packet_length_ratio,If the value is between 0.3 and 0.6,Suspicious traffic ratios may imply focused attacks or scanning activity.,Analyze concentrated traffic by IP or port.
+median_forward_packet_length_ratio,If the value is between 0.3 and 0.6,Suspicious traffic ratios may imply focused attacks or scanning activity.,Analyze concentrated traffic by IP or port.
+std_backward_packet_length_ratio,If the value is between 0.3 and 0.6,Suspicious traffic ratios may imply focused attacks or scanning activity.,Analyze concentrated traffic by IP or port.
+mean_backward_packet_length_ratio,If the value is between 0.3 and 0.6,Suspicious traffic ratios may imply focused attacks or scanning activity.,Analyze concentrated traffic by IP or port.
+max_backward_packet_length_ratio,If the value is between 0.3 and 0.6,Suspicious traffic ratios may imply focused attacks or scanning activity.,Analyze concentrated traffic by IP or port.
+min_backward_packet_length_ratio,If the value is between 0.3 and 0.6,Suspicious traffic ratios may imply focused attacks or scanning activity.,Analyze concentrated traffic by IP or port.
+var_backward_packet_length_ratio,If the value is between 0.3 and 0.6,Suspicious traffic ratios may imply focused attacks or scanning activity.,Analyze concentrated traffic by IP or port.
+median_backward_packet_length_ratio,If the value is between 0.3 and 0.6,Suspicious traffic ratios may imply focused attacks or scanning activity.,Analyze concentrated traffic by IP or port.
+flow_duration_ratio,If the value is between 0.3 and 0.6,Suspicious traffic ratios may imply focused attacks or scanning activity.,Analyze concentrated traffic by IP or port.
+flow_duration_of_forward_traffic_ratio,If the value is between 0.3 and 0.6,Suspicious traffic ratios may imply focused attacks or scanning activity.,Analyze concentrated traffic by IP or port.
+flow_duration_of_backward_traffic_ratio,If the value is between 0.3 and 0.6,Suspicious traffic ratios may imply focused attacks or scanning activity.,Analyze concentrated traffic by IP or port.
+mean_Interval_of_arrival_time_of_forward_traffic_ratio,If the value is between 0.3 and 0.6,Suspicious traffic ratios may imply focused attacks or scanning activity.,Analyze concentrated traffic by IP or port.
+median_Interval_of_arrival_time_of_forward_traffic_ratio,If the value is between 0.3 and 0.6,Suspicious traffic ratios may imply focused attacks or scanning activity.,Analyze concentrated traffic by IP or port.
+max_Interval_of_arrival_time_of_forward_traffic_ratio,If the value is between 0.3 and 0.6,Suspicious traffic ratios may imply focused attacks or scanning activity.,Analyze concentrated traffic by IP or port.
+min_Interval_of_arrival_time_of_forward_traffic_ratio,If the value is 0 or very small,Very short inter-packet times may indicate automated or scripted traffic.,Consider applying detection rules for bots or automated tools.
+std_Interval_of_arrival_time_of_forward_traffic_ratio,If the value is between 0.3 and 0.6,Suspicious traffic ratios may imply focused attacks or scanning activity.,Analyze concentrated traffic by IP or port.
+var_Interval_of_arrival_time_of_forward_traffic_ratio,If the value is between 0.3 and 0.6,Suspicious traffic ratios may imply focused attacks or scanning activity.,Analyze concentrated traffic by IP or port.
+mean_Interval_of_arrival_time_of_backward_traffic_ratio,If the value is between 0.3 and 0.6,Suspicious traffic ratios may imply focused attacks or scanning activity.,Analyze concentrated traffic by IP or port.
+median_Interval_of_arrival_time_of_backward_traffic_ratio,If the value is between 0.3 and 0.6,Suspicious traffic ratios may imply focused attacks or scanning activity.,Analyze concentrated traffic by IP or port.
+max_Interval_of_arrival_time_of_backward_traffic_ratio,If the value is between 0.3 and 0.6,Suspicious traffic ratios may imply focused attacks or scanning activity.,Analyze concentrated traffic by IP or port.
+min_Interval_of_arrival_time_of_backward_traffic_ratio,If the value is 0 or very small,Very short inter-packet times may indicate automated or scripted traffic.,Consider applying detection rules for bots or automated tools.
+std_Interval_of_arrival_time_of_backward_traffic_ratio,If the value is between 0.3 and 0.6,Suspicious traffic ratios may imply focused attacks or scanning activity.,Analyze concentrated traffic by IP or port.
+var_Interval_of_arrival_time_of_backward_traffic_ratio,If the value is between 0.3 and 0.6,Suspicious traffic ratios may imply focused attacks or scanning activity.,Analyze concentrated traffic by IP or port.
+total_ttl_forward_traffic_ratio,If the value is between 0.3 and 0.6,Suspicious traffic ratios may imply focused attacks or scanning activity.,Analyze concentrated traffic by IP or port.
+std_ttl_forward_traffic_ratio,If the value is between 0.3 and 0.6,Suspicious traffic ratios may imply focused attacks or scanning activity.,Analyze concentrated traffic by IP or port.
+mean_ttl_forward_traffic_ratio,If the value is between 0.3 and 0.6,Suspicious traffic ratios may imply focused attacks or scanning activity.,Analyze concentrated traffic by IP or port.
+max_ttl_forward_traffic_ratio,If the value is between 0.3 and 0.6,Suspicious traffic ratios may imply focused attacks or scanning activity.,Analyze concentrated traffic by IP or port.
+min_ttl_forward_traffic_ratio,If the value is between 0.3 and 0.6,Suspicious traffic ratios may imply focused attacks or scanning activity.,Analyze concentrated traffic by IP or port.
+var_ttl_forward_traffic_ratio,If the value is high,High TTL variance may indicate routing evasion or proxy use.,Enable detection rules based on TTL anomalies.
+median_ttl_forward_traffic_ratio,If the value is between 0.3 and 0.6,Suspicious traffic ratios may imply focused attacks or scanning activity.,Analyze concentrated traffic by IP or port.
+total_ttl_backward_traffic_ratio,If the value is between 0.3 and 0.6,Suspicious traffic ratios may imply focused attacks or scanning activity.,Analyze concentrated traffic by IP or port.
+std_ttl_backward_traffic_ratio,If the value is between 0.3 and 0.6,Suspicious traffic ratios may imply focused attacks or scanning activity.,Analyze concentrated traffic by IP or port.
+mean_ttl_backward_traffic_ratio,If the value is between 0.3 and 0.6,Suspicious traffic ratios may imply focused attacks or scanning activity.,Analyze concentrated traffic by IP or port.
+max_ttl_backward_traffic_ratio,If the value is between 0.3 and 0.6,Suspicious traffic ratios may imply focused attacks or scanning activity.,Analyze concentrated traffic by IP or port.
+min_ttl_backward_traffic_ratio,If the value is between 0.3 and 0.6,Suspicious traffic ratios may imply focused attacks or scanning activity.,Analyze concentrated traffic by IP or port.
+var_ttl_backward_traffic_ratio,If the value is high,High TTL variance may indicate routing evasion or proxy use.,Enable detection rules based on TTL anomalies.
+median_ttl_backward_traffic_ratio,If the value is between 0.3 and 0.6,Suspicious traffic ratios may imply focused attacks or scanning activity.,Analyze concentrated traffic by IP or port.
+total_TCP_windows_size_value_forward_traffic_ratio,If the value is between 0.3 and 0.6,Suspicious traffic ratios may imply focused attacks or scanning activity.,Analyze concentrated traffic by IP or port.
+std_TCP_windows_size_value_forward_traffic_ratio,If the value is between 0.3 and 0.6,Suspicious traffic ratios may imply focused attacks or scanning activity.,Analyze concentrated traffic by IP or port.
+mean_TCP_windows_size_value_forward_traffic_ratio,If the value is between 0.3 and 0.6,Suspicious traffic ratios may imply focused attacks or scanning activity.,Analyze concentrated traffic by IP or port.
+max_TCP_windows_size_value_forward_traffic_ratio,If the value is between 0.3 and 0.6,Suspicious traffic ratios may imply focused attacks or scanning activity.,Analyze concentrated traffic by IP or port.
+min_TCP_windows_size_value_forward_traffic_ratio,If the value is between 0.3 and 0.6,Suspicious traffic ratios may imply focused attacks or scanning activity.,Analyze concentrated traffic by IP or port.
+var_TCP_windows_size_value_forward_traffic_ratio,If the value is between 0.3 and 0.6,Suspicious traffic ratios may imply focused attacks or scanning activity.,Analyze concentrated traffic by IP or port.
+median_TCP_windows_size_value_forward_traffic_ratio,If the value is between 0.3 and 0.6,Suspicious traffic ratios may imply focused attacks or scanning activity.,Analyze concentrated traffic by IP or port.
+total_TCP_windows_size_valuel_backward_traffic_ratio,If the value is between 0.3 and 0.6,Suspicious traffic ratios may imply focused attacks or scanning activity.,Analyze concentrated traffic by IP or port.
+std_TCP_windows_size_value_backward_traffic_ratio,If the value is between 0.3 and 0.6,Suspicious traffic ratios may imply focused attacks or scanning activity.,Analyze concentrated traffic by IP or port.
+mean_TCP_windows_size_value_backward_traffic_ratio,If the value is between 0.3 and 0.6,Suspicious traffic ratios may imply focused attacks or scanning activity.,Analyze concentrated traffic by IP or port.
+max_TCP_windows_size_value_backward_traffic_ratio,If the value is between 0.3 and 0.6,Suspicious traffic ratios may imply focused attacks or scanning activity.,Analyze concentrated traffic by IP or port.
+min_TCP_windows_size_value_backward_traffic_ratio,If the value is between 0.3 and 0.6,Suspicious traffic ratios may imply focused attacks or scanning activity.,Analyze concentrated traffic by IP or port.
+var_TCP_windows_size_value_backward_traffic_ratio,If the value is between 0.3 and 0.6,Suspicious traffic ratios may imply focused attacks or scanning activity.,Analyze concentrated traffic by IP or port.
+median_TCP_windows_size_value_backward_traffic_ratio,If the value is between 0.3 and 0.6,Suspicious traffic ratios may imply focused attacks or scanning activity.,Analyze concentrated traffic by IP or port.
+Total_length_of_IP_packet_ratio,If the value is between 0.3 and 0.6,Suspicious traffic ratios may imply focused attacks or scanning activity.,Analyze concentrated traffic by IP or port.
+max_length_of_IP_packet_ratio,If the value is between 0.3 and 0.6,Suspicious traffic ratios may imply focused attacks or scanning activity.,Analyze concentrated traffic by IP or port.
+min_length_of_IP_packet_ratio,If the value is small,A high ratio of short IP packets may indicate C2 (command/control) traffic.,"Consider filtering sessions with short, repetitive packets."
+var_length_of_IP_packet_ratio,If the value is between 0.3 and 0.6,Suspicious traffic ratios may imply focused attacks or scanning activity.,Analyze concentrated traffic by IP or port.
+std_length_of_IP_packet_ratio,If the value is between 0.3 and 0.6,Suspicious traffic ratios may imply focused attacks or scanning activity.,Analyze concentrated traffic by IP or port.
+meidan_length_of_IP_packet_ratio,If the value is between 0.3 and 0.6,Suspicious traffic ratios may imply focused attacks or scanning activity.,Analyze concentrated traffic by IP or port.
+Total_Time_to_live_ratio,If the value is between 0.3 and 0.6,Suspicious traffic ratios may imply focused attacks or scanning activity.,Analyze concentrated traffic by IP or port.
+Total_length_of_forward_payload_ratio,If the value is large,Abnormally large payloads may indicate data exfiltration or tunneling.,Monitor sessions with high payload volume.
+Total_length_of_backward_payload_ratio,If the value is large,Abnormally large payloads may indicate data exfiltration or tunneling.,Monitor sessions with high payload volume.
+Total_length_of_forward_IP_header_ratio,If the value is between 0.3 and 0.6,Suspicious traffic ratios may imply focused attacks or scanning activity.,Analyze concentrated traffic by IP or port.
+Total_length_of_backward_IP_header_ratio,If the value is between 0.3 and 0.6,Suspicious traffic ratios may imply focused attacks or scanning activity.,Analyze concentrated traffic by IP or port.
+Total_length_of_forward_TCP_header_ratio,If the value is between 0.3 and 0.6,Suspicious traffic ratios may imply focused attacks or scanning activity.,Analyze concentrated traffic by IP or port.
+Total_length_of_backward_TCP_header_ratio,If the value is between 0.3 and 0.6,Suspicious traffic ratios may imply focused attacks or scanning activity.,Analyze concentrated traffic by IP or port.
+enc_ratio_of_forward_packets,If the value is between 0.3 and 0.6,Suspicious traffic ratios may imply focused attacks or scanning activity.,Analyze concentrated traffic by IP or port.
+enc_ratio_of_backward_packets,If the value is between 0.3 and 0.6,Suspicious traffic ratios may imply focused attacks or scanning activity.,Analyze concentrated traffic by IP or port.
+Total_length_of_forward_TCP_segment_ratio,If the value is between 0.3 and 0.6,Suspicious traffic ratios may imply focused attacks or scanning activity.,Analyze concentrated traffic by IP or port.
+Total_length_of_backward_TCP_segment_ratio,If the value is between 0.3 and 0.6,Suspicious traffic ratios may imply focused attacks or scanning activity.,Analyze concentrated traffic by IP or port.
+total_payload_per_session_ratio,If the value is between 0.3 and 0.6,Suspicious traffic ratios may imply focused attacks or scanning activity.,Analyze concentrated traffic by IP or port.
+IPratio_ratio,If the value is between 0.3 and 0.6,Suspicious traffic ratios may imply focused attacks or scanning activity.,Analyze concentrated traffic by IP or port.
