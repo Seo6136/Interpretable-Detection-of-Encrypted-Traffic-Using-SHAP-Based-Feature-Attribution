@@ -22,7 +22,7 @@ Key contributions of this project include:
 
 ### Architecture
 
-![System Framework](./system-framework.png)
+![System Framework](./system-framework-ver2.png)
 
 1. **Learning & Attribution Engine**
    - Trains a Random Forest classifier on encrypted traffic datasets.
